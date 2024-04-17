@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - 20.11.0
+
+cache:
+  directories:
+    - node_modules
+
+script:
+  - npm test
+
+deploy:
+  provider: heroku
+  api_key: HRKU-833103f9-2f21-4aa9-8321-25c898996955
+  app: shrouded-fjord-15648
+  on:
+    branch: main
